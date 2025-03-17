@@ -130,12 +130,18 @@
 
                try {
                   const response = await fetch(
-                     "http://localhost:5000/api/waitlist/add",
+                     "https://range-waitlist.onrender.com/api/waitlist/add",
                      {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({ email }),
                      }
+                     // "http://localhost:5000/api/waitlist/add",
+                     // {
+                     //    method: "POST",
+                     //    headers: { "Content-Type": "application/json" },
+                     //    body: JSON.stringify({ email }),
+                     // }
                   );
 
                   const result = await response.json();
